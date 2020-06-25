@@ -115,31 +115,7 @@ let cta;
                 <Typography component="h2" variant="h5">
                   {pagina.cta_form_email}
                 </Typography>
-                <form className={classes.form} noValidate>
-                  <TextField
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="email"
-                    label="Digite o seu E-mail"
-                    name="email"
-                    autoComplete="email"
-                    autoFocus
-                  />
-                  <div className={classes.heroButtons}>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                    className={classes.submit}
-                  >
-                    ENVIAR
-                  </Button> <LockIcon />Nós nunca enviamos SPAM
-</div>
-
-                </form>
+                <SignupForm />
             </Grid>
 
 
