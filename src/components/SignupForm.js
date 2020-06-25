@@ -29,40 +29,27 @@ const SignupForm = () => {
 
   return (
     <div>
+          <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
+                <div class="uk-inline">
+                           <a class="uk-form-icon" href="#" uk-icon="icon: mail"></a>
+                           <input class="uk-input uk-form-width-large uk-form-large "
+                            aria-label="Email address"
+                            onChange={event => setEmail(event.target.value)}
+                            placeholder="Digite seu e-mail"
+                            required
+                            type="email"
+                            />
+                  </div>
+                  <button class="uk-button uk-button-large uk-margin">Inscrever</button>
 
-      <form className={classes.form} noValidate onSubmit={handleSubmit}>
-        <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="email"
-          label="Digite o seu E-mail"
-          name="email"
-          autoComplete="email"
-          autoFocus
-          onChange={event => setEmail(event.target.value)}
-        />
-        <div className={classes.heroButtons}>
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.submit}
-        >
-          ENVIAR
-        </Button> <LockIcon />Nós nunca enviamos SPAM
-            <div className={classNames("text-lg", { "opacity-0": !message })}>
-              <span className="uk-label uk-text-medium">{message}</span>
-            </div>
-        </div>
+              <div class="uk-margin">
+              <span uk-icon="lock"></span> <span> Nós nunca enviamos SPAM e você pode desinscrever a qualquer momento</span>
+              </div>
+          </form>
 
-      </form>
-
-
-
-
+          <div className={classNames("text-lg", { "opacity-0": !message })}>
+            <span className="uk-label uk-text-medium">{message}</span>
+          </div>
     </div>
   )
 }
