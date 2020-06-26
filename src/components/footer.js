@@ -1,7 +1,7 @@
 import React from "react"
-import FacebookIcon from '@material-ui/icons/FacebookIcon';
-import InstagramIcon from '@material-ui/icons/InstagramIcon';
-import YoutubeIcon from '@material-ui/icons/YoutubeIcon';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 const Footer = () => {
 
