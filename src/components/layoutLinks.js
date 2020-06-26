@@ -6,8 +6,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-import Footer from "./footer"
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +58,6 @@ const LayoutLinks = ({ children }) => {
     />
       <Seo />
       <main>{children}</main>
-      <Footer />
       </Container>
     </>
   )
