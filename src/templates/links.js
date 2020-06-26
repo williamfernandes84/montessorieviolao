@@ -28,13 +28,13 @@ const Links = ({ data }) => {
     <LayoutLinks>
       <Container maxWidth="sm">
 
-        <List component="nav" aria-label="mailbox folders">
+        <List>
           {links.map((link, i) => {
             return (
               <ListItem>
                 <ListItemText>
                   <a href={link.node.url}>{link.node.title}</a>
-                  <Divider component="li" />
+                  <Divider />
                 </ListItemText>
               </ListItem>
             )
