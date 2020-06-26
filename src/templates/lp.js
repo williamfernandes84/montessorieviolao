@@ -1,26 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Img from "gatsby-image"
 import SignupForm from "../components/SignupForm"
 import Layout from "../components/layout"
 
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-import LockIcon from '@material-ui/icons/Lock';
 
 export const query = graphql`
   query LpQuery($id: Int!) {
@@ -72,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Pagina = ({ data }) => {
-let cta;
   const pagina = data.strapiLp
 
   const classes = useStyles();
@@ -94,7 +83,7 @@ let cta;
       <CssBaseline />
 
           <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} align="center" square>
-            <img src={pagina.cta_img.publicURL} />
+            <img src={pagina.cta_img.publicURL} alt="Imagem CTA"/>
           </Grid>
 
             <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} square>
@@ -115,31 +104,7 @@ let cta;
                 <Typography component="h2" variant="h5">
                   {pagina.cta_form_email}
                 </Typography>
-                <form className={classes.form} noValidate>
-                  <TextField
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="email"
-                    label="Digite o seu E-mail"
-                    name="email"
-                    autoComplete="email"
-                    autoFocus
-                  />
-                  <div className={classes.heroButtons}>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                    className={classes.submit}
-                  >
-                    ENVIAR
-                  </Button> <LockIcon />Nós nunca enviamos SPAM
-</div>
-
-                </form>
+                <SignupForm />
             </Grid>
 
 

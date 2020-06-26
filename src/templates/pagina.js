@@ -11,7 +11,8 @@ export const query = graphql`
       strapiId
       titulo
       headline
-      
+      conteudo
+
     }
   }
 `
@@ -26,7 +27,7 @@ const Pagina = ({ data }) => {
             <ReactMarkdown source={pagina.titulo} />
             <h3>{pagina.headline}</h3>
             <p>
-              {pagina.conteudo}
+              <ReactMarkdown source={pagina.conteudo} />
             </p>
           </div>
         </div>

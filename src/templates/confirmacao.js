@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Img from "gatsby-image"
-import SignupForm from "../components/SignupForm"
 import Layout from "../components/layout"
 
 export const query = graphql`
@@ -34,7 +32,7 @@ const Pagina = ({ data }) => {
                 <div className="uk-flex-center">
                 <h2>{pagina.conteudo}</h2>
                           <br /><br />
-                <img src={pagina.imagem.publicURL} width='20%'/>
+                <img src={pagina.imagem.publicURL} width='20%' alt="Imagem Confirmação"/>
 
                 </div>
 

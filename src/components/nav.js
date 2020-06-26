@@ -10,11 +10,12 @@ const Nav = () => (
             <StaticQuery
               query={graphql`
                 {
-                  paginas: allStrapiPaginas {
+                  paginas: allStrapiPaginas{
                     edges {
                       node {
                         strapiId
                         titulo
+                        exibir_menu
                       }
                     }
                   }
@@ -26,6 +27,8 @@ const Nav = () => (
               render={data =>
 
           data.paginas.edges.map((pagina, i) => {
+
+            if (pagina.node.exibir_menu === true){
                   return (
                     <div className="uk-navbar-right">
                     <ul className="uk-navbar-nav">
@@ -36,7 +39,11 @@ const Nav = () => (
                     </ul>
                     </div>
                   )
-                })
+                } else {
+                  return (<></>)
+                }
+
+              })
 
               }
             />

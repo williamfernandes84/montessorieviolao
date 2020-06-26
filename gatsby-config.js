@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    locale: "en",
-    title: `Montessori e Violão`,
-    description: `Ajudamos famílias na alfabetização e desenvolvimento de suas crianças`,
-    author: `@montessorieviolaon`,
+    locale: '',
+    title: '',
+    description: '241009',
+    author: '',
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -49,6 +49,30 @@ module.exports = {
         display: "minimal-ui",
       },
     },
+
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-115586130-3', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-google-analytics', // default
+          anonymize: true // default
+        },
+        googleTagManager: {
+          trackingId: 'GTM-N5RW2WX', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-google-tagmanager', // default
+          dataLayerName: 'dataLayer', // default
+        },
+        facebookPixel: {
+          pixelId: '', // leave empty if you want to disable the tracker
+          cookieName: '', // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
+      },
+    },
+
+
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -56,34 +80,7 @@ module.exports = {
         timeout: 3500,
       },
     },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-N5RW2WX",
 
-        // Include GTM in development.
-        //
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: true,
-
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        //
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
-
-        // Specify optional GTM environment details.
-        //gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
-        //gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
-        //dataLayerName: "YOUR_DATA_LAYER_NAME",
-
-        // Name of the event that is triggered
-        // on every Gatsby route change.
-        //
-        // Defaults to gatsby-route-change
-        routeChangeEventName: "gatsby-route-change",
-      },
-    },
 
   ],
 }
