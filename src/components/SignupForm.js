@@ -46,7 +46,7 @@ const SignupForm = () => {
                         <Email />
                       </InputAdornment>
                     ),
-                    endAdornment:<Button variant="contained" color="primary">INSCREVER</Button>
+                    endAdornment:<Button type="submit" variant="contained" color="primary">INSCREVER</Button>
 
                   }}
             />
