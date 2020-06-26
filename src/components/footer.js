@@ -11,7 +11,7 @@ const Footer = () => {
         <ul className="uk-list-inline">
           <li><a href="https://instagram.com/montessorieviolao"> <InstagramIcon color="primary"/> </a></li>
           <li><a href="https://facebook.com/montessorieviolao"> <FacebookIcon color="primary"/>< /a></li>
-          <li><a href="https://youtube.com/montessorieviolao"> <YoutubeIcon color="primary" /> </a></li>
+          <li><a href="https://youtube.com/montessorieviolao"> <YouTubeIcon color="primary" /> </a></li>
         </ul>
       </div>
 
