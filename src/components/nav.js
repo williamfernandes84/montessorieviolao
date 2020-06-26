@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
-
 import Logo from "./logo"
+
 const Nav = () => (
   <div>
     <div>

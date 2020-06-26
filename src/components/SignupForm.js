@@ -1,6 +1,11 @@
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import React, { useState } from "react"
 import Checkbox from '@material-ui/core/Checkbox';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Email from '@material-ui/icons/Email';
+import Button from '@material-ui/core/Button';
+
 
 
 const SignupForm = () => {
@@ -30,19 +35,21 @@ const SignupForm = () => {
 
   return (
     <div>
-          <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
-                <div class="uk-inline">
-                           <p class="uk-form-icon" uk-icon="icon: mail"></p>
-                           <input class="uk-input uk-form-width-large uk-form-large "
-                            aria-label="Email address"
-                            onChange={event => setEmail(event.target.value)}
-                            placeholder="Digite seu e-mail"
-                            required
-                            type="email"
-                            />
-                  </div>
-                  <button class="uk-button uk-button-large uk-margin">
-                  Inscrever</button> <span uk-icon="lock"></span> <span> Seguro e sem SPAM.</span>
+          <form  onSubmit={handleSubmit}>
+          <TextField
+              onChange={event => setEmail(event.target.value)}
+                id="filled-basic" label="Digite o seu E-mail" variant="filled"
+                fullWidth
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Email />
+                      </InputAdornment>
+                    ),
+                    endAdornment:<Button variant="contained" color="primary">INSCREVER</Button>
+
+                  }}
+            />
                  <br /><Checkbox
                     required="true"
                     id="group_11610_1"

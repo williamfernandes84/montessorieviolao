@@ -72,7 +72,7 @@ const Pagina = ({ data }) => {
         <Container maxWidth="xl">
 
           <Container maxWidth="lg">
-                    <Typography component="h3" variant="h5" align="center" color="textSecondary" paragraph>
+                    <Typography component="h3" variant="h5" align="center" color="textPrimary" paragraph>
                      {pagina.headline}
                    </Typography>
         </Container>

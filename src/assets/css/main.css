@@ -45,7 +45,7 @@ img:hover {
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.site-footer {padding:20px;background:#539cc8;margin-bottom:10px;text-align:center;color:#fff}
+
 
 .uk-list-inline > li {
     list-style: none;

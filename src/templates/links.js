@@ -1,7 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import Layout from "../components/layout"
+import Container from '@material-ui/core/Container';
+import Divider from '@material-ui/core/Divider';
+import LayoutLinks from "../components/layoutLinks"
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
 export const query = graphql`
   query MyQuery {
@@ -21,39 +25,24 @@ const Links = ({ data }) => {
   const links = data.links.edges
 
   return (
-    <Layout>
+    <LayoutLinks>
+      <Container maxWidth="sm">
 
-      <div className="uk-section">
-        <div className="uk-container uk-container">
-          <div className="uk-flex uk-flex-center">
-              <div className="uk-card uk-card-default uk-card-body uk-flex-center">
+        <List component="nav" aria-label="mailbox folders">
+          {links.map((link, i) => {
+            return (
+              <ListItem>
+                <ListItemText>
+                  <a href={link.node.url}>{link.node.title}</a>
+                  <Divider component="li" />
+                </ListItemText>
+              </ListItem>
+            )
+          })}
 
-                {links.map((link, i) => {
-                return (
-
-                  <dl class="uk-description-list uk-description-list-divider">
-                      <dt><a href={link.node.url}>{link.node.title}</a></dt>
-                  </dl>
-
-                )
-                })}
-
-
-              </div>
-          </div>
-
-
-
-
-            <br /><br />
-          </div>
-      </div>
-
-
-
-
-
-    </Layout>
+        </List>
+      </Container>
+    </LayoutLinks>
   )
 }
 
