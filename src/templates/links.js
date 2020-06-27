@@ -9,7 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 export const query = graphql`
   query MyQuery {
-    links: allStrapiLink {
+    links: allStrapiLink(sort: {fields: strapiId, order: ASC}) {
       edges {
         node {
           title
