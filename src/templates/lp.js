@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 
 import SignupForm from "../components/SignupForm"
 import Layout from "../components/layout"
-import SobreNos from "../components/sobrenos"
+import SobreNos from "../components/SobreNos"
 
 export const query = graphql`
   query LpQuery($id: Int!) {
@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
+  buttonTelegram: {
+    textAlign: 'center',
+  },
 
 }));
 
@@ -77,9 +80,9 @@ const Pagina = ({ data }) => {
           </Grid>
 
             <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} square>
-                <Typography component="h2" variant="h5" paragraph>
-                  {pagina.cta_telegram} <br />
-                <div className={classes.heroButtons}>
+                <Typography component="span" paragraph> <br />
+                  {pagina.cta_telegram} <br /><br />
+                <div className={classes.buttonTelegram}>
                     <Button
                     href={pagina.link_telegram}
                     variant="contained"
@@ -89,10 +92,8 @@ const Pagina = ({ data }) => {
                 </Typography>
 
                 <Divider variant="middle" className={classes.divider} />
-
-                <br /><br />
-                <Typography component="h2" variant="h5">
-                  {pagina.cta_form_email}
+                <Typography component="span">
+                  {pagina.cta_form_email}<br /><br />
                 </Typography>
                 <SignupForm />
             </Grid>

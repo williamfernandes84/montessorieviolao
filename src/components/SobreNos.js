@@ -6,12 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ReactMarkdown from "react-markdown"
 import Grid from '@material-ui/core/Grid';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 
 const useStyles = makeStyles((theme) => ({
   sobrenos: {
-    "flexGrow": 1,
     "padding": "10px",
-    "background-color": "#ffffff",
+    "background-color": "#ffd8d8",
     "fonte-size": "8px"
   },
   image: {
@@ -30,6 +31,7 @@ const classes = useStyles();
   return (
 
     <div className={classes.sobrenos}>
+    <CssBaseline />
 
       <Grid container spacing={3}>
         <Grid item className={classes.img} xs={3}>
