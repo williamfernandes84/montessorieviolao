@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title="Montessori e Violãoß"
+      title="Montessori e Violão - Um caminho leve para a alfabetização"
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={[
         {
