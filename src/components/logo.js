@@ -28,9 +28,9 @@ const Logo = () => (
 
           data.configuracao.edges.map((config, i) => {
                   return (
-                    <div className="uk-navbar-left">
+                    <div key ={i} className="uk-navbar-left">
                     <ul className="uk-navbar-nav">
-                      <li>
+                      <li key ={i} >
                         <Link to={`#`}> <HomeIcon /></Link>
                       </li>
 

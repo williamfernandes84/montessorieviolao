@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Seo from "./seo"
-import Avatar from '@material-ui/core/Avatar';
 import { StaticQuery, graphql } from "gatsby"
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';

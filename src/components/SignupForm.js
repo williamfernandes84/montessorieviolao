@@ -51,7 +51,7 @@ const SignupForm = () => {
                   }}
             />
                  <br /><Checkbox
-                    required="true"
+                    required={true}
                     id="group_11610_1"
                     name="group[11610][1]"
                     onChange={event => setCheckBoxManual("2")}
@@ -59,7 +59,7 @@ const SignupForm = () => {
                     value="2"
                     inputProps={{ 'aria-label': 'secondary checkbox' }}
                   /> Ao marcar este checkbox você indica autorizar a inscrição do seu e-mail e estar ciente da nossa política de Cookies.
-              <div class="uk-margin">
+              <div className="uk-margin">
               <p>{message}</p>
 
               </div>

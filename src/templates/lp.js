@@ -77,9 +77,9 @@ const Pagina = ({ data }) => {
     <Layout>
     <CssBaseline />
       <div className={classes.root}>
-        <Container maxWidth="xl">
+        <Container maxwidth="xl">
 
-          <Container maxWidth="lg">
+          <Container maxwidth="lg">
                     <Typography component="h3" variant="h5" align="center" color="textPrimary" paragraph>
                      <b>{pagina.headline}</b>
                    </Typography>
@@ -87,14 +87,14 @@ const Pagina = ({ data }) => {
 
         <Divider variant="middle" className={classes.divider}/>
 
-      <Grid container maxWidth="sm"  alignItems="center" spacing={3} >
+      <Grid container maxwidth="sm"  alignItems="center" spacing={3} >
       <CssBaseline />
 
-          <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} align="center" square>
+          <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} align="center" >
             <img src={pagina.cta_img.publicURL} alt="Imagem CTA"/>
           </Grid>
 
-            <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} square>
+            <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} >
                 <Typography component="span" paragraph> <br />
                   {pagina.cta_telegram} <br /><br />
                 <div className={classes.buttonTelegram}>

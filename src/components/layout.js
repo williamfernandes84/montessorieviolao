@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import CookieConsent from 'react-cookie-consent';
 import Divider from '@material-ui/core/Divider';
 
-import Nav from "./nav"
 import Seo from "./seo"
 import Footer from "./footer"
 
@@ -13,7 +12,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Seo />
-      <Nav />
       <main>{children}</main>
       <CookieConsent
         buttonText="Ok, eu concordo!"
