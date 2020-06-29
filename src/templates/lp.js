@@ -7,10 +7,12 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import SignupForm from "../components/SignupForm"
 import Layout from "../components/layout"
-import SobreNos from "../components/SobreNos"
+import ReactMarkdown from "react-markdown"
 
 export const query = graphql`
   query LpQuery($id: Int!) {
@@ -35,8 +37,8 @@ export const query = graphql`
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 16, 0),
+    backgroundColor: "#FFFFFF",
+    padding: theme.spacing(8, 0, 8, 0),
 
   },
   divider: {
@@ -50,6 +52,19 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
 
+  sobrenos: {
+    "padding": "15px",
+    "background-color": "#ffd8d8",
+    "fonte-size": "8px"
+  },
+  image: {
+    },
+  img: {
+    borderRadius: '100%',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    textAlign: 'center',
+    },
 }));
 
 
@@ -97,20 +112,27 @@ const Pagina = ({ data }) => {
                 </Typography>
                 <SignupForm />
             </Grid>
-
           </Grid>
-
-          <Divider className={classes.divider} variant="middle" />
-
-          <SobreNos conteudo={pagina.sobre_nos} imagem={pagina.foto_perfil.publicURL}/>
-
-
         </Container>
 </div>
 
+    <div className={classes.sobrenos}>
+      <Grid container spacing={3}>
+        <Grid item className={classes.img} xs={3}>
+            <img className={classes.img} alt="Eu" src={pagina.foto_perfil.publicURL} />
+            <br /><br />
+            <div className={classes.menuLeft}>
+                <Typography display="inline"><a href="https://instagram.com/montessorieviolao"> <InstagramIcon color="primary"/> </a></Typography>
+                <Typography display="inline"><a href="https://facebook.com/montessorieviolao"> <FacebookIcon color="primary"/>< /a></Typography>
+                <Typography display="inline"><a href="https://youtube.com/montessorieviolao"> <YouTubeIcon color="primary" /> </a></Typography>
+            </div>
+        </Grid>
+        <Grid item xs>
+          <ReactMarkdown source={pagina.sobre_nos} />
+        </Grid>
+      </Grid>
 
-
-
+    </div>
 
 
 

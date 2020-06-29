@@ -6,7 +6,6 @@ import Divider from '@material-ui/core/Divider';
 import Nav from "./nav"
 import Seo from "./seo"
 import Footer from "./footer"
-import SobreNos from "../components/SobreNos"
 
 
 
