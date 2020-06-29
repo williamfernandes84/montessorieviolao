@@ -10,6 +10,14 @@ module.exports = {
     author: '',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,

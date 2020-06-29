@@ -59,7 +59,7 @@ const SignupForm = () => {
                     value="2"
                     inputProps={{ 'aria-label': 'secondary checkbox' }}
                   /> Ao marcar este checkbox você indica autorizar a inscrição do seu e-mail e estar ciente da nossa política de Cookies.
-              <div className="uk-margin">
+              <div>
               <p>{message}</p>
 
               </div>
