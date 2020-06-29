@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     locale: '',
     title: '',
-    description: '241009',
+    description: '',
     author: '',
   },
   plugins: [
@@ -54,8 +54,8 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: 'UA-115586130-3', // leave empty if you want to disable the tracker
-          cookieName: 'gatsby-gdpr-google-analytics', // default
+          trackingId: '', // leave empty if you want to disable the tracker
+          cookieName: '', // default
           anonymize: true // default
         },
         googleTagManager: {

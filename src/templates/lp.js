@@ -1,9 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import SignupForm from "../components/SignupForm"
-import Layout from "../components/layout"
-
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -11,6 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
+
+import SignupForm from "../components/SignupForm"
+import Layout from "../components/layout"
+import SobreNos from "../components/sobrenos"
 
 export const query = graphql`
   query LpQuery($id: Int!) {
@@ -20,13 +20,14 @@ export const query = graphql`
       headline
       cta_telegram
       link_telegram
-      description_1
-      description_2
-      description_3
+      sobre_nos
       cta_img {
         publicURL
       }
       cta_form_email
+      foto_perfil{
+        publicURL
+      }
     }
   }
 `
@@ -35,29 +36,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    padding: theme.spacing(8, 0, 16, 0),
 
   },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  paper: {
-    margin: theme.spacing(3),
-  },
-  grid: {
-    marginTop: theme.spacing(4),
+  divider: {
+    margin: theme.spacing(4,0,4,0),
   },
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
+
 }));
 
 
@@ -68,18 +57,19 @@ const Pagina = ({ data }) => {
 
   return (
     <Layout>
+    <CssBaseline />
       <div className={classes.root}>
         <Container maxWidth="xl">
 
           <Container maxWidth="lg">
                     <Typography component="h3" variant="h5" align="center" color="textPrimary" paragraph>
-                     {pagina.headline}
+                     <b>{pagina.headline}</b>
                    </Typography>
         </Container>
 
-        <Divider variant="middle" />
+        <Divider variant="middle" className={classes.divider}/>
 
-      <Grid container className={classes.grid} alignItems="center" spacing={3} >
+      <Grid container maxWidth="sm"  alignItems="center" spacing={3} >
       <CssBaseline />
 
           <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} align="center" square>
@@ -87,7 +77,6 @@ const Pagina = ({ data }) => {
           </Grid>
 
             <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} square>
-
                 <Typography component="h2" variant="h5" paragraph>
                   {pagina.cta_telegram} <br />
                 <div className={classes.heroButtons}>
@@ -99,7 +88,8 @@ const Pagina = ({ data }) => {
                   >ENTRAR PARA O GRUPO</Button> </div>
                 </Typography>
 
-                <Divider variant="middle" />
+                <Divider variant="middle" className={classes.divider} />
+
                 <br /><br />
                 <Typography component="h2" variant="h5">
                   {pagina.cta_form_email}
@@ -107,11 +97,14 @@ const Pagina = ({ data }) => {
                 <SignupForm />
             </Grid>
 
+          </Grid>
+
+          <Divider className={classes.divider} variant="middle" />
+
+          <SobreNos conteudo={pagina.sobre_nos} imagem={pagina.foto_perfil.publicURL}/>
 
 
-    </Grid>
-
-</Container>
+        </Container>
 </div>
 
 

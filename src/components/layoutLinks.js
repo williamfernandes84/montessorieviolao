@@ -7,22 +7,19 @@ import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 
+
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    '& > *': {
-      margin: theme.spacing(1),
+  img: {
+    borderRadius: '100%',
+    maxWidth: '200px',
+    maxHeight: '200px',
+    textAlign: 'center',
     },
-  },
-  large: {
-    "padding": "15px",
-    width: theme.spacing(10),
-    height: theme.spacing(10),
-  },
 }));
 
 const LayoutLinks = ({ children }) => {
   const classes = useStyles();
+
   return (
     <>
     <Container maxWidth="sm">
@@ -49,7 +46,7 @@ const LayoutLinks = ({ children }) => {
   data.configuracao.edges.map((config, i) => {
           return (
             <Box display="flex" justifyContent="center">
-              <Avatar alt="Montessori e Violão" style={{alignSelf: 'center'}}  className={classes.large} src={config.node.image.publicURL} />
+              <img className={classes.img} alt="Montessori e Violão" src={config.node.image.publicURL} style={{alignSelf: 'center'}}/>
             </Box>
           )
         })

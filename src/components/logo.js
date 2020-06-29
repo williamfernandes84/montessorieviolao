@@ -31,7 +31,7 @@ const Logo = () => (
                     <div className="uk-navbar-left">
                     <ul className="uk-navbar-nav">
                       <li>
-                        <Link to={`/`}> <HomeIcon /></Link>
+                        <Link to={`#`}> <HomeIcon /></Link>
                       </li>
 
                     </ul>
