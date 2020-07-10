@@ -34,7 +34,7 @@ const Pagina = ({ data }) => {
 
                 <div className="uk-flex-center">
                 <h2>{pagina.headline}</h2>
-                <p>{pagina.conteudo}</p
+                <p>{pagina.conteudo}</p>
                           <br />
 
                 <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} align="center" >
