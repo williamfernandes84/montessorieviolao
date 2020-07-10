@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Grid from '@material-ui/core/Grid';
 
 import Layout from "../components/layout"
 
@@ -9,6 +10,7 @@ export const query = graphql`
       strapiId
       titulo
       conteudo
+      urlWhatsapp
       imagem {
         publicURL
       }
