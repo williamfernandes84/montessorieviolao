@@ -32,7 +32,10 @@ const Pagina = ({ data }) => {
                 <div className="uk-flex-center">
                 <h2>{pagina.conteudo}</h2>
                           <br /><br />
-                <img src={pagina.imagem.publicURL} width='20%' alt="Imagem Confirmação"/>
+
+                <Grid item xs={false} sm={false} md={6} lg={6} xl={6} elevation={6} align="center" >
+                <a href={pagina.urlWhatsapp}><img src={pagina.imagem.publicURL} width='20%' alt="Imagem Confirmação"/></a>
+                </Grid>
 
                 </div>
 
