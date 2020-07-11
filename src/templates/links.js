@@ -7,8 +7,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Icon from '@material-ui/core/Icon';
 
 export const query = graphql`
   query MyQuery {
@@ -23,10 +24,51 @@ export const query = graphql`
     }
   }
 `
+const BootstrapButton = withStyles({
+  root: {
+    boxShadow: 'none',
+    textTransform: 'none',
+    fontSize: 16,
+    padding: '6px 12px',
+    border: '1px solid',
+    lineHeight: 1.5,
+    backgroundColor: '#0063cc',
+    borderColor: '#0063cc',
+    width: '320px',
+    height: '50px',
+    borderRadius: '15px',
+    textAlign: 'center',
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    '&:hover': {
+      backgroundColor: '#0069d9',
+      borderColor: '#0062cc',
+      boxShadow: 'none',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: '#0062cc',
+      borderColor: '#005cbf',
+    },
+    '&:focus': {
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+    },
+  },
+})(Button);
 
 const useStyles = makeStyles((theme) => ({
-  divider: {
-    margin: theme.spacing(1,0,1,0),
+  margin: {
+    margin: theme.spacing(0),
   },
 
 }));
@@ -38,8 +80,7 @@ const Links = ({ data }) => {
   return (
     <LayoutLinks>
     <CssBaseline />
-      <Container maxWidth="sm">
-      <Divider className={classes.divider}/>
+      <Divider className={classes.margin}/>
 
         <List>
           {links.map((link, i) => {
@@ -47,17 +88,15 @@ const Links = ({ data }) => {
 
               <ListItem>
                 <ListItemText>
-                <Button variant="contained" color="secondary" href={link.node.url}>
+                  <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin} href={link.node.url}>
                 {link.node.title}
-                </Button>
-                  <Divider className={classes.divider}/>
+                </BootstrapButton>
                 </ListItemText>
               </ListItem>
             )
           })}
 
         </List>
-      </Container>
     </LayoutLinks>
   )
 }
