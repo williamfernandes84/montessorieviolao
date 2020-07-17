@@ -71,6 +71,11 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve("./src/templates/links.js"),
     })
 
+    createPage({
+        path: `/caminho`,
+        component: require.resolve("./src/templates/desafio.js"),
+      })
+
   confirmacoes.forEach((confirmacao, index) => {
     createPage({
       path: `/confirmacao/${confirmacao.node.titulo}`,
