@@ -138,9 +138,7 @@ const Pagina = ({  }) => {
               <Typography component="h3" variant="h5" align="center" color="textPrimary" paragraph>
                <b>Introdução</b>
               </Typography>
-              <Typography component="span" align="center" color="textPrimary" paragraph>
-               A Introdução está disponível no IGTV @montessorieviolao.
-             </Typography><br /><br />
+              <Vimeo video="439326913" responsive /><br /><br />
              <Typography component="span" align="center" color="textPrimary" paragraph>
               Se tiver dúvidas, envie uma mensagen no Direct do Instagram @montessorieviolao
             </Typography>
@@ -194,9 +192,14 @@ const Pagina = ({  }) => {
               <Typography component="h3" variant="h5" align="center" color="textPrimary" paragraph>
                <b>Escrita <LockIcon /></b>
              </Typography>
+             <Vimeo video="439510314" responsive /><br />
              <Typography component="span" align="center" color="textPrimary" paragraph>
-              Senha de acesso será informada na Live do dia 17/Julho às 21h
+              Senha de acesso foi informada na Live do dia 17/Julho
             </Typography><br /><br />
+            <Typography component="span" align="center" color="textPrimary" paragraph>
+             Clique no Link para ser direcionado para nossa pasta de materiais de impressão e baixar os templates para as atividades de Coordenação.
+           </Typography><br /><br />
+           <a href="https://drive.google.com/drive/folders/1qfO-bNlckwcQgfQ1CS8YBVp0WY91NDeW?usp=sharing"> <FolderIcon />Pasta de Materiais</a><br /><br />
             <Typography component="span" align="center" color="textPrimary" paragraph>
              Se tiver dúvidas, envie uma mensagen no Direct do Instagram @montessorieviolao
            </Typography>
