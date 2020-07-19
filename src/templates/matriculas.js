@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#FFFFFF",
-    padding: theme.spacing(8, 0, 8, 0),
+    padding: theme.spacing(2, 0, 2, 0),
 
   },
   divider: {
@@ -39,15 +39,14 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonbuttonComprar: {
     textAlign: 'center',
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(3),
     backgroundColor: "#5F9578",
+    "padding": "15px",
 
   },
 
-  sobrenos: {
+  sobreCurso: {
     "padding": "15px",
-    "background-color": "#ffd8d8",
-    "fonte-size": "8px"
   },
   image: {
     },
@@ -72,9 +71,9 @@ const Pagina = () => {
           alignItems="center"
           justify="center"
         >
-        <Grid>
+        <Grid className={classes.sobreCurso}>
           <Typography component="h1" variant="h5" align="center" >
-            Caminho para Leitura
+            <b>Caminho para Leitura</b>
           </Typography>
           <Typography component="p" variant="p" align="center" >
             No vídeo abaixo explicamos sobre o curso <b>Caminho para Leitura</b> do Montessori e Violão
@@ -339,6 +338,16 @@ const Pagina = () => {
 
             <Divider variant="middle" className={classes.divider}/>
 
+            <Typography component="span" variant="span" align="center" >
+              Clique no Botão ao lado para garantir a sua Vaga com <b>30% de Desconto!</b>
+            </Typography>
+            <Button
+                href='https://pay.hotmart.com/J8041377E?off=2lnyppqp'
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.buttonbuttonComprar}
+              >COMPRAR AGORA!</Button>
 
           </List>
 
