@@ -76,12 +76,7 @@ const Pagina = () => {
           <Typography component="h1" variant="h5" align="center" >
             Caminho para Leitura
           </Typography>
-          <Typography component="p" variant="p" align="center" >
-            No vídeo abaixo explicamos sobre o curso <b>Caminho para Leitura</b> do Montessori e Violão
-          </Typography>
           <br />
-            <ReactPlayer url='https://youtu.be/m0JikamPxNY' />
-            <br />
             <Typography component="span" variant="span" align="center" >
               Clique no Botão ao lado para garantir a sua Vaga!
             </Typography>
