@@ -80,7 +80,7 @@ const Pagina = () => {
             No vídeo abaixo explicamos sobre o curso <b>Caminho para Leitura</b> do Montessori e Violão
           </Typography>
           <br />
-            <ReactPlayer width='100%' url='https://youtu.be/VtweZerkN5I' />
+            <ReactPlayer width='100%' url='https://youtu.be/jRbd0iDzrBE' />
             <br />
             <Typography component="span" variant="span" align="center" >
               Clique no Botão ao lado para garantir a sua Vaga com <b>30% de Desconto!</b>
