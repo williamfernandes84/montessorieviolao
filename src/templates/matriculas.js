@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   buttonbuttonComprar: {
     textAlign: 'center',
     marginLeft: theme.spacing(3),
+    marginTop: theme.spacing(1),
     backgroundColor: "#5F9578",
     "padding": "15px",
 
@@ -338,9 +339,6 @@ const Pagina = () => {
 
             <Divider variant="middle" className={classes.divider}/>
 
-            <Typography component="span" variant="span" align="center" >
-              Clique no Botão ao lado para garantir a sua Vaga com <b>30% de Desconto!</b>
-            </Typography>
             <Button
                 href='https://pay.hotmart.com/J8041377E?off=2lnyppqp'
                 variant="contained"
