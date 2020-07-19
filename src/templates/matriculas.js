@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#FFFFFF",
-    padding: theme.spacing(8, 0, 8, 0),
+    padding: theme.spacing(2, 0, 2, 0),
 
   },
   divider: {
@@ -34,8 +34,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
+    backgroundColor: "#FFFFFF",
+    "padding": "50px",
+
   },
   buttonbuttonComprar: {
     textAlign: 'center',
@@ -67,16 +68,19 @@ const Pagina = () => {
     <CssBaseline />
       <div className={classes.root}>
         <Grid
+          className={classes.heading}
           container
           spacing={0}
           alignItems="center"
           justify="center"
         >
-        <Grid>
+        <Grid >
           <Typography component="h1" variant="h5" align="center" >
-            Caminho para Leitura
+            <b>Caminho para Leitura</b>
           </Typography>
           <br />
+          <ReactPlayer url='https://youtu.be/VtweZerkN5I'/>
+          <br /><br /><br />
             <Typography component="span" variant="span" align="center" >
               Clique no Botão ao lado para garantir a sua Vaga!
             </Typography>
