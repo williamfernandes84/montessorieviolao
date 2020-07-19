@@ -21,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#FFFFFF",
-    padding: theme.spacing(2, 0, 2, 0),
+    padding: theme.spacing(8, 0, 8, 0),
 
   },
   divider: {
-    margin: theme.spacing(2,0,2,0),
+    margin: theme.spacing(4,0,4,0),
   },
   centerBlock: {
     width: '100%', // Fix IE 11 issue.
@@ -34,9 +34,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   heading: {
-    backgroundColor: "#FFFFFF",
-    "padding": "50px",
-
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
   },
   buttonbuttonComprar: {
     textAlign: 'center',
@@ -68,19 +67,21 @@ const Pagina = () => {
     <CssBaseline />
       <div className={classes.root}>
         <Grid
-          className={classes.heading}
           container
           spacing={0}
           alignItems="center"
           justify="center"
         >
-        <Grid >
+        <Grid>
           <Typography component="h1" variant="h5" align="center" >
-            <b>Caminho para Leitura</b>
+            Caminho para Leitura
+          </Typography>
+          <Typography component="p" variant="p" align="center" >
+            No vídeo abaixo explicamos sobre o curso <b>Caminho para Leitura</b> do Montessori e Violão
           </Typography>
           <br />
-          <ReactPlayer url='https://youtu.be/VtweZerkN5I'/>
-          <br /><br /><br />
+            <ReactPlayer url='https://youtu.be/VtweZerkN5I' />
+            <br />
             <Typography component="span" variant="span" align="center" >
               Clique no Botão ao lado para garantir a sua Vaga!
             </Typography>
@@ -313,7 +314,7 @@ const Pagina = () => {
                             className={classes.inline}
                             color="textPrimary"
                           >
-                            Bônus exclusivos para esta turma!
+                            Bônus para esta turma!
                           </Typography>
 
                           <ul>
@@ -327,7 +328,7 @@ const Pagina = () => {
                             <li>Acesso a todos materiais em PDF que produzirmos ou atualizações dos materiais existentes</li>
                             <li>Acesso a todas as Lives da série "O Caminho" (versão editada)</li>
                             <li>AULA BÔNUS: Como adaptar essas atividade em Sala de Aula</li>
-                            <li>AULA BÔNUS: Sobre adaptação em meio a mudanças</li>
+                            <li>AULA BÔNUS: Sobre adaptação em</li>
                           </ul>
 
                         </React.Fragment>
@@ -337,17 +338,6 @@ const Pagina = () => {
             </ListItem>
 
             <Divider variant="middle" className={classes.divider}/>
-
-            <Typography component="span" variant="span" align="center" >
-              Clique no Botão ao lado para garantir a sua Vaga!
-            </Typography>
-            <Button
-                href='https://pay.hotmart.com/J8041377E?off=2lnyppqp'
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.buttonbuttonComprar}
-              >COMPRAR AGORA!</Button>
 
 
           </List>
