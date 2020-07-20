@@ -76,23 +76,6 @@ const Pagina = () => {
           <Typography component="h1" variant="h5" align="center" >
             <b>Caminho para Leitura</b>
           </Typography>
-          <Typography component="p" variant="p" align="center" >
-            No vídeo abaixo explicamos sobre o curso <b>Caminho para Leitura</b> do Montessori e Violão
-          </Typography>
-          <br />
-            <ReactPlayer width='100%' url='https://youtu.be/jRbd0iDzrBE' />
-            <br />
-            <Typography component="span" variant="span" align="center" >
-              Clique no Botão ao lado para garantir a sua Vaga com <b>30% de Desconto!</b>
-            </Typography>
-            <Button
-                href='https://pay.hotmart.com/J8041377E?off=2lnyppqp'
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.buttonbuttonComprar}
-              >COMPRAR AGORA!</Button>
-
           </Grid>
 
         </Grid>
@@ -340,7 +323,7 @@ const Pagina = () => {
             <Divider variant="middle" className={classes.divider}/>
 
             <Button
-                href='https://pay.hotmart.com/J8041377E?off=2lnyppqp'
+                href='https://pay.hotmart.com/J8041377E?off=b9w01nxn'
                 variant="contained"
                 color="primary"
                 size="large"
