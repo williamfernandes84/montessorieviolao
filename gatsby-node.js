@@ -77,8 +77,8 @@ exports.createPages = async ({ graphql, actions }) => {
       })
 
       createPage({
-          path: `/matriculas`,
-          component: require.resolve("./src/templates/matriculas.js"),
+          path: `/cpl/grade`,
+          component: require.resolve("./src/templates/gradeCPL.js.js"),
         })
 
       
