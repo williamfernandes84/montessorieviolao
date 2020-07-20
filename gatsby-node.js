@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
       createPage({
           path: `/cpl/grade`,
-          component: require.resolve("./src/templates/gradeCPL.js.js"),
+          component: require.resolve("./src/templates/gradeCPL.js"),
         })
 
       
