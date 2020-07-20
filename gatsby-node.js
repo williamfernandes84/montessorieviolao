@@ -81,10 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
           component: require.resolve("./src/templates/matriculas.js"),
         })
 
-        createPage({
-            path: `/matriculas/confirmado`,
-            component: require.resolve("./src/templates/matriculasConfirmadas.js"),
-          })
+      
 
 
   confirmacoes.forEach((confirmacao, index) => {
